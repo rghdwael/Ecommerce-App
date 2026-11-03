@@ -9,12 +9,12 @@ class HomePage extends StatelessWidget {
     {
       'name': 'Green Dress',
       'price': 45,
-      'image': 'images/dress.webp',
+      'image': 'assets/images/dress.webp',
     },
     {
       'name': 'Casual Sneakers',
       'price': 35,
-      'image': 'images/sneakers.webp',
+      'image': 'assets/images/sneakers.webp',
     },
   ];
 
@@ -174,28 +174,32 @@ class HomePage extends StatelessWidget {
                                   ),
                                 ),
 
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Column(
-                                    children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                      product['name'] as String,
-                                        style: const TextStyle(fontWeight: FontWeight.bold),
-                                        maxLines: 1,
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                      const SizedBox(height: 4),
-                                      Text(
-                                        "\$${product['price']}",
-                                        style: TextStyle(color: AppColors.textSecondary)
-                                      ),
-                                    ],
-                                  )
-                                    ],
-                                  ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Text(
+                                            product['name'] as String,
+                                            style: const TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+                                        Text(
+                                          '\$${product['price']}',
+                                          style: TextStyle(
+                                            color: AppColors.textSecondary,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 4),
+                                  ],
                                 ),
 
                               ],

@@ -7,7 +7,7 @@ class ImageWidget extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset('images/hero_image.jfif',
+    return Image.asset('assets/images/hero_image.jfif',
       fit: BoxFit.contain,
       height: height,
       width: double.infinity,);
