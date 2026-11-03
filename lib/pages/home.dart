@@ -9,12 +9,20 @@ class HomePage extends StatelessWidget {
     {
       'name': 'Green Dress',
       'price': 45,
+<<<<<<< HEAD
       'image': 'images/dress.webp',
+=======
+      'image': 'assets/images/dress.webp',
+>>>>>>> Test_branch
     },
     {
       'name': 'Casual Sneakers',
       'price': 35,
+<<<<<<< HEAD
       'image': 'images/sneakers.webp',
+=======
+      'image': 'assets/images/sneakers.webp',
+>>>>>>> Test_branch
     },
   ];
 
@@ -174,6 +182,7 @@ class HomePage extends StatelessWidget {
                                   ),
                                 ),
 
+<<<<<<< HEAD
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Column(
@@ -196,6 +205,34 @@ class HomePage extends StatelessWidget {
                                   )
                                     ],
                                   ),
+=======
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Text(
+                                            product['name'] as String,
+                                            style: const TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+                                        Text(
+                                          '\$${product['price']}',
+                                          style: TextStyle(
+                                            color: AppColors.textSecondary,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 4),
+                                  ],
+>>>>>>> Test_branch
                                 ),
 
                               ],

@@ -73,6 +73,7 @@ class _StateMain extends State<MainScreen>{
         child: ListView(
           children: [
             DrawerHeader(
+<<<<<<< HEAD
                 decoration: BoxDecoration(
             color: AppColors.primary),
               child:Column(
@@ -98,6 +99,44 @@ class _StateMain extends State<MainScreen>{
                   ),
                 ],
               )
+=======
+              decoration: const BoxDecoration(
+                color: AppColors.primary,
+              ),
+              child: ListenableBuilder(
+                listenable: widget.userData,
+                builder: (context, child) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: widget.userData.profileImageBytes != null
+                            ? MemoryImage(widget.userData.profileImageBytes!)
+                            : null,
+                        child: widget.userData.profileImageBytes == null
+                            ? const Icon(Icons.person)
+                            : null,
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        widget.userData.name!,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        widget.userData.email,
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                    ],
+                  );
+                },
+              ),
+>>>>>>> Test_branch
             ),
             ListTile(
               title: Text('Home'),
